@@ -10,12 +10,11 @@ class Triangle
   end
 
   def kind
+    validate_triangle
     if (x.positive? && y.positive? && z.positive? ) && ((@x+@y>@z && @y+@z>@x && @x+@z>@y))
-      puts z
-      # binding.pry
-      if @x==@y && @y==@z
+      if x==y && y==z
          :equilateral
-      elsif @x==@y  ||  @y==@z|| @x==@z
+      elsif x==y  || y==z || x==z
          :isosceles
       else
          :scalene
@@ -26,7 +25,7 @@ class Triangle
   end
 
   def validate_triangle
-
+    real_triangle=[(@)]
   end
 
 
