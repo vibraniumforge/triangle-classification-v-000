@@ -26,7 +26,7 @@ class Triangle
 
   def validate_triangle
     real_triangle=[(x+y>z), (x+z>y), (y+z>x)]
-    [x,y,z].each {|item| real_triangle<< false if s<=0}
+    [x,y,z].each {|item| real_triangle<< false if item<=0}
     rasie TriangleError if real_triangle.include?(false)
   end
 
