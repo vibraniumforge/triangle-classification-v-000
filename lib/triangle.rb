@@ -1,7 +1,7 @@
 require "pry"
 class Triangle
   # write code here
-  attr_accessor :x, :y, :z
+  attr_reader :x, :y, :z
 
   def initialize(x,y,z)
     @x=x
@@ -13,9 +13,9 @@ class Triangle
     if (x.positive? && y.positive? && z.positive? ) && ((@x+@y>@z && @y+@z>@x && @x+@z>@y))
       puts z
       # binding.pry
-      if (@x==@y && @y==@z && @x==@z)
+      if @x==@y && @y==@z
         return :equilateral
-      elsif (@x==@y && @y!=@z) || (@x!=@y && @y==@z) || (@x==@z && @y!=@z)
+      elsif @x==@y  ||  @y==@z|| @x==@z 
         return :isosceles
       else
         return :scalene
@@ -23,6 +23,10 @@ class Triangle
     else
         raise TriangleError
     end
+  end
+
+  def validate_triangle
+
   end
 
 
