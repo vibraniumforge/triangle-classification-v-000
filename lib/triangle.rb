@@ -14,11 +14,11 @@ class Triangle
       puts z
       # binding.pry
       if @x==@y && @y==@z
-        return :equilateral
-      elsif @x==@y  ||  @y==@z|| @x==@z 
-        return :isosceles
+         :equilateral
+      elsif @x==@y  ||  @y==@z|| @x==@z
+         :isosceles
       else
-        return :scalene
+         :scalene
       end
     else
         raise TriangleError
